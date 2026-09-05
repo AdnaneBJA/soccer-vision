@@ -16,3 +16,8 @@ models/checkpoints/
 *.mp4
 *.avi
 *.mov
+*.partial
+samples/input/*.source.json
+data/soccer/
+data/downloads/
+runs/

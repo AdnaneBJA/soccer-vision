@@ -1,0 +1,16 @@
+model: yolo26n.pt
+data: data/soccer/data.yaml
+epochs: 50
+batch: 8
+imgsz: 640
+lr0: 0.001
+optimizer: AdamW
+device: auto
+workers: 0
+seed: 42
+deterministic: true
+project: outputs/training
+name: soccer_yolo26n
+patience: 15
+plots: true
+amp: false

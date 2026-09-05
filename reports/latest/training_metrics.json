@@ -1,0 +1,106 @@
+{
+  "dataset": {
+    "splits": {
+      "train": {
+        "images": 298,
+        "instances": {
+          "ball": 258,
+          "goalkeeper": 230,
+          "player": 5955,
+          "referee": 690
+        }
+      },
+      "val": {
+        "images": 49,
+        "instances": {
+          "ball": 45,
+          "goalkeeper": 39,
+          "player": 973,
+          "referee": 117
+        }
+      },
+      "test": {
+        "images": 25,
+        "instances": {
+          "ball": 24,
+          "goalkeeper": 19,
+          "player": 500,
+          "referee": 56
+        }
+      }
+    },
+    "exact_cross_split_duplicates": [],
+    "limitation": "Exact hashes do not detect near-duplicate frames or overlap with third-party model training"
+  },
+  "epochs": [
+    {
+      "epoch": 1.0,
+      "time": 65.9351,
+      "train/box_loss": 2.14733,
+      "train/cls_loss": 2.87692,
+      "train/l1_loss": 0.00216,
+      "metrics/precision(B)": 0.01566,
+      "metrics/recall(B)": 0.23664,
+      "metrics/mAP50(B)": 0.12922,
+      "metrics/mAP50-95(B)": 0.05494,
+      "val/box_loss": 1.87572,
+      "val/cls_loss": 3.30086,
+      "val/l1_loss": 0.00266,
+      "lr/pg0": 0.000486842,
+      "lr/pg1": 0.000486842,
+      "lr/pg2": 0.0518026
+    },
+    {
+      "epoch": 2.0,
+      "time": 130.327,
+      "train/box_loss": 1.91574,
+      "train/cls_loss": 2.03424,
+      "train/l1_loss": 0.00187,
+      "metrics/precision(B)": 0.0156,
+      "metrics/recall(B)": 0.23561,
+      "metrics/mAP50(B)": 0.16519,
+      "metrics/mAP50-95(B)": 0.07022,
+      "val/box_loss": 2.01263,
+      "val/cls_loss": 2.71869,
+      "val/l1_loss": 0.00302,
+      "lr/pg0": 0.000661184,
+      "lr/pg1": 0.000661184,
+      "lr/pg2": 0.00197697
+    },
+    {
+      "epoch": 3.0,
+      "time": 194.385,
+      "train/box_loss": 1.87608,
+      "train/cls_loss": 1.82393,
+      "train/l1_loss": 0.00175,
+      "metrics/precision(B)": 0.42244,
+      "metrics/recall(B)": 0.17139,
+      "metrics/mAP50(B)": 0.1879,
+      "metrics/mAP50-95(B)": 0.10107,
+      "val/box_loss": 1.63188,
+      "val/cls_loss": 1.93504,
+      "val/l1_loss": 0.00227,
+      "lr/pg0": 0.00034,
+      "lr/pg1": 0.00034,
+      "lr/pg2": 0.00034
+    }
+  ],
+  "base_model": "yolo26n.pt",
+  "config": {
+    "data": "data/soccer/data.yaml",
+    "epochs": 3,
+    "batch": 8,
+    "imgsz": 640,
+    "lr0": 0.001,
+    "optimizer": "AdamW",
+    "device": "cpu",
+    "workers": 0,
+    "seed": 42,
+    "deterministic": true,
+    "project": "outputs/training",
+    "name": "soccer_yolo26n_cpu3",
+    "patience": 15,
+    "plots": true,
+    "amp": false
+  }
+}

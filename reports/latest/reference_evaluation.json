@@ -1,0 +1,95 @@
+{
+  "model": "models/checkpoints/best.pt",
+  "split": "test",
+  "device": "cpu",
+  "image_size": 640,
+  "dataset": {
+    "splits": {
+      "train": {
+        "images": 298,
+        "instances": {
+          "ball": 258,
+          "goalkeeper": 230,
+          "player": 5955,
+          "referee": 690
+        }
+      },
+      "val": {
+        "images": 49,
+        "instances": {
+          "ball": 45,
+          "goalkeeper": 39,
+          "player": 973,
+          "referee": 117
+        }
+      },
+      "test": {
+        "images": 25,
+        "instances": {
+          "ball": 24,
+          "goalkeeper": 19,
+          "player": 500,
+          "referee": 56
+        }
+      }
+    },
+    "exact_cross_split_duplicates": [],
+    "limitation": "Exact hashes do not detect near-duplicate frames or overlap with third-party model training"
+  },
+  "metrics": {
+    "metrics/precision(B)": 0.9212107138134417,
+    "metrics/recall(B)": 0.7790284576038726,
+    "metrics/mAP50(B)": 0.8153380250502014,
+    "metrics/mAP50-95(B)": 0.5447697199093848,
+    "fitness": 0.5447697199093848
+  },
+  "classes": [
+    {
+      "Class": "ball",
+      "Images": 23,
+      "Instances": 24,
+      "Box-P": 0.80678,
+      "Box-R": 0.41667,
+      "Box-F1": 0.54953,
+      "mAP50": 0.39708,
+      "mAP50-95": 0.08342
+    },
+    {
+      "Class": "goalkeeper",
+      "Images": 19,
+      "Instances": 19,
+      "Box-P": 0.93542,
+      "Box-R": 0.76316,
+      "Box-F1": 0.84055,
+      "mAP50": 0.89508,
+      "mAP50-95": 0.67899
+    },
+    {
+      "Class": "player",
+      "Images": 25,
+      "Instances": 500,
+      "Box-P": 0.97276,
+      "Box-R": 0.972,
+      "Box-F1": 0.97238,
+      "mAP50": 0.98219,
+      "mAP50-95": 0.76765
+    },
+    {
+      "Class": "referee",
+      "Images": 25,
+      "Instances": 56,
+      "Box-P": 0.96989,
+      "Box-R": 0.96429,
+      "Box-F1": 0.96708,
+      "mAP50": 0.98699,
+      "mAP50-95": 0.64903
+    }
+  ],
+  "speed_ms": {
+    "preprocess": 0.36093599162995815,
+    "inference": 362.9501280002296,
+    "loss": 0.00041600316762924194,
+    "postprocess": 0.4031119868159294
+  },
+  "limitation": "Third-party checkpoint may have seen related frames; these are in-domain measurements, not independent generalization evidence"
+}

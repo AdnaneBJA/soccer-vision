@@ -1,0 +1,174 @@
+{
+  "model": "models/checkpoints/best.pt",
+  "split": "val",
+  "images": 49,
+  "iou": 0.5,
+  "results": [
+    {
+      "threshold": 0.2,
+      "classes": {
+        "ball": {
+          "tp": 19,
+          "fp": 13,
+          "fn": 26,
+          "precision": 0.59375,
+          "recall": 0.4222222222222222
+        },
+        "goalkeeper": {
+          "tp": 27,
+          "fp": 4,
+          "fn": 12,
+          "precision": 0.8709677419354839,
+          "recall": 0.6923076923076923
+        },
+        "player": {
+          "tp": 958,
+          "fp": 62,
+          "fn": 15,
+          "precision": 0.9392156862745098,
+          "recall": 0.9845837615621789
+        },
+        "referee": {
+          "tp": 113,
+          "fp": 14,
+          "fn": 4,
+          "precision": 0.889763779527559,
+          "recall": 0.9658119658119658
+        }
+      }
+    },
+    {
+      "threshold": 0.3,
+      "classes": {
+        "ball": {
+          "tp": 19,
+          "fp": 11,
+          "fn": 26,
+          "precision": 0.6333333333333333,
+          "recall": 0.4222222222222222
+        },
+        "goalkeeper": {
+          "tp": 27,
+          "fp": 4,
+          "fn": 12,
+          "precision": 0.8709677419354839,
+          "recall": 0.6923076923076923
+        },
+        "player": {
+          "tp": 954,
+          "fp": 50,
+          "fn": 19,
+          "precision": 0.950199203187251,
+          "recall": 0.9804727646454265
+        },
+        "referee": {
+          "tp": 111,
+          "fp": 8,
+          "fn": 6,
+          "precision": 0.9327731092436975,
+          "recall": 0.9487179487179487
+        }
+      }
+    },
+    {
+      "threshold": 0.4,
+      "classes": {
+        "ball": {
+          "tp": 18,
+          "fp": 7,
+          "fn": 27,
+          "precision": 0.72,
+          "recall": 0.4
+        },
+        "goalkeeper": {
+          "tp": 27,
+          "fp": 3,
+          "fn": 12,
+          "precision": 0.9,
+          "recall": 0.6923076923076923
+        },
+        "player": {
+          "tp": 952,
+          "fp": 37,
+          "fn": 21,
+          "precision": 0.9625884732052579,
+          "recall": 0.9784172661870504
+        },
+        "referee": {
+          "tp": 109,
+          "fp": 6,
+          "fn": 8,
+          "precision": 0.9478260869565217,
+          "recall": 0.9316239316239316
+        }
+      }
+    },
+    {
+      "threshold": 0.5,
+      "classes": {
+        "ball": {
+          "tp": 16,
+          "fp": 4,
+          "fn": 29,
+          "precision": 0.8,
+          "recall": 0.35555555555555557
+        },
+        "goalkeeper": {
+          "tp": 26,
+          "fp": 2,
+          "fn": 13,
+          "precision": 0.9285714285714286,
+          "recall": 0.6666666666666666
+        },
+        "player": {
+          "tp": 944,
+          "fp": 24,
+          "fn": 29,
+          "precision": 0.9752066115702479,
+          "recall": 0.9701952723535457
+        },
+        "referee": {
+          "tp": 106,
+          "fp": 3,
+          "fn": 11,
+          "precision": 0.9724770642201835,
+          "recall": 0.905982905982906
+        }
+      }
+    },
+    {
+      "threshold": 0.6,
+      "classes": {
+        "ball": {
+          "tp": 13,
+          "fp": 2,
+          "fn": 32,
+          "precision": 0.8666666666666667,
+          "recall": 0.28888888888888886
+        },
+        "goalkeeper": {
+          "tp": 26,
+          "fp": 1,
+          "fn": 13,
+          "precision": 0.9629629629629629,
+          "recall": 0.6666666666666666
+        },
+        "player": {
+          "tp": 930,
+          "fp": 15,
+          "fn": 43,
+          "precision": 0.9841269841269841,
+          "recall": 0.9558067831449126
+        },
+        "referee": {
+          "tp": 101,
+          "fp": 2,
+          "fn": 16,
+          "precision": 0.9805825242718447,
+          "recall": 0.8632478632478633
+        }
+      }
+    }
+  ],
+  "method": "Class-specific Hungarian matching of cached predictions; not mAP"
+}

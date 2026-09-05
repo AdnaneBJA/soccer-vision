@@ -1,0 +1,11 @@
+{
+  "controlled_frames": 302,
+  "unknown_frames": 448,
+  "total_frames": 750,
+  "ball_observed_frames": 501,
+  "possession_percent": {
+    "0": 27.483443708609272,
+    "1": 72.51655629139073
+  },
+  "method": "nearest classified player's feet within image-pixel threshold; unknown excluded"
+}

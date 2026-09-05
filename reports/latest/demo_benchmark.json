@@ -1,0 +1,39 @@
+{
+  "frames": 749,
+  "avg_latency_ms": 236.76516969025494,
+  "p50_latency_ms": 234.05659990385175,
+  "p95_latency_ms": 269.49870004318655,
+  "inference_fps": 4.223594210703531,
+  "processed_frames": 750,
+  "device": "cpu",
+  "warmup_latency_ms": 1539.0062998048961,
+  "video_processing_seconds": 199.98395890020765,
+  "pipeline_fps": 3.750300794746499,
+  "total_seconds": 210.89224100019783,
+  "input": "samples/input/match.mp4",
+  "output": "outputs/videos/complete_match.mp4",
+  "video": {
+    "fps": 25.0,
+    "width": 1920,
+    "height": 1080,
+    "reported_frames": 750
+  },
+  "model": "models/checkpoints/best.pt",
+  "detections_by_class": {
+    "player": 16207,
+    "referee": 1840,
+    "ball": 772,
+    "goalkeeper": 523
+  },
+  "scene_cuts": [],
+  "unique_tracks": 124,
+  "team_classifier_fitted": true,
+  "versions": {
+    "python": "3.10.20",
+    "torch": "2.14.0+cpu",
+    "ultralytics": "8.4.141",
+    "opencv": "4.14.0"
+  },
+  "gpu_peak_memory_mb": null,
+  "timing": "Inference excludes first-frame warmup; pipeline includes initialization, decoding, annotations and video writing"
+}

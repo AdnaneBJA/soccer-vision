@@ -77,9 +77,9 @@ class VideoIOTests(unittest.TestCase):
             next(reader.frames())
 
     def test_cli_success_and_failure(self):
-        self.assertEqual(main(["--input", str(self.make_clip()), "--output",
+        self.assertEqual(main(["--mode", "copy", "--input", str(self.make_clip()), "--output",
                                str(self.root / "cli.mp4")]), 0)
-        self.assertEqual(main(["--input", str(self.root / "absent.mp4"), "--output",
+        self.assertEqual(main(["--mode", "copy", "--input", str(self.root / "absent.mp4"), "--output",
                                str(self.root / "unused.mp4")]), 1)
 
 

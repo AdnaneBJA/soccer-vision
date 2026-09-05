@@ -1,0 +1,31 @@
+{
+  "input": "samples/input/match.mp4",
+  "torch": "2.14.0+cpu",
+  "runs": [
+    {
+      "frames": 30,
+      "avg_latency_ms": 328.056956649137,
+      "p50_latency_ms": 355.70179985370487,
+      "p95_latency_ms": 371.3512400747277,
+      "inference_fps": 3.0482511641096472,
+      "model": "models/checkpoints/best.pt",
+      "device": "cpu",
+      "image_size": 640,
+      "warmup_frames": 3,
+      "gpu_peak_memory_mb": null
+    },
+    {
+      "frames": 30,
+      "avg_latency_ms": 20.768086666551728,
+      "p50_latency_ms": 20.35624999552965,
+      "p95_latency_ms": 23.896435031201687,
+      "inference_fps": 48.15080060362812,
+      "model": "models/checkpoints/soccer_yolo26n_cpu3.pt",
+      "device": "cpu",
+      "image_size": 640,
+      "warmup_frames": 3,
+      "gpu_peak_memory_mb": null
+    }
+  ],
+  "method": "Same initial frames; decode excluded; predict includes preprocess, inference, postprocess and CPU transfer"
+}
