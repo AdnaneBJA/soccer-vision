@@ -1,0 +1,31 @@
+{
+  "input": "samples\\input\\match.mp4",
+  "torch": "2.11.0+cu128",
+  "runs": [
+    {
+      "frames": 30,
+      "avg_latency_ms": 229.95799332857132,
+      "p50_latency_ms": 227.86009998526424,
+      "p95_latency_ms": 257.0273650344461,
+      "inference_fps": 4.348620308976032,
+      "model": "models/checkpoints/best.pt",
+      "device": "cpu",
+      "image_size": 640,
+      "warmup_frames": 3,
+      "gpu_peak_memory_mb": null
+    },
+    {
+      "frames": 30,
+      "avg_latency_ms": 18.814443331211805,
+      "p50_latency_ms": 18.50529992952943,
+      "p95_latency_ms": 20.37160510662943,
+      "inference_fps": 53.15065571677436,
+      "model": "models/checkpoints/best.pt",
+      "device": "cuda:0",
+      "image_size": 640,
+      "warmup_frames": 3,
+      "gpu_peak_memory_mb": 330.6337890625
+    }
+  ],
+  "method": "Same initial frames; decode excluded; predict includes preprocess, inference, postprocess and CPU transfer"
+}

@@ -16,7 +16,9 @@ Detection scores use the same 25-image test split. Benchmarks use the same first
 Host: Windows, AMD Ryzen 9 7900X CPU, Python 3.10.20, PyTorch 2.14.0+cpu.
 The smaller model is faster but insufficiently trained; these are not equivalent
 accuracy operating points. Its ball and goalkeeper detection remain poor. The
-reference checkpoint remains the default. There is no measured GPU comparison.
+reference checkpoint remains the default. This table preserves the original CPU
+experiment. A later [CUDA benchmark](cuda/cpu_vs_cuda.json) measured the reference
+model at 4.35 CPU FPS and 53.15 GPU FPS using PyTorch 2.11.0+cu128 on both devices.
 
 Potential overlap between reference-model training footage and this dataset
 prevents interpreting these as independent generalization scores.

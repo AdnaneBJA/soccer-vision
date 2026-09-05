@@ -69,8 +69,10 @@ python -m pip install -r requirements.txt
 
 If an existing environment has no pip, run `python -m ensurepip --upgrade`.
 Select `.venv` as the interpreter in PyCharm. The implementation was tested on
-Windows with Python 3.10.20, PyTorch 2.14.0+cpu and OpenCV 4.14.0. CUDA hardware
-was unavailable; GPU selection is tested, but hardware execution is unverified.
+Windows with Python 3.10.20 and OpenCV 4.14.0. Initial measurements used PyTorch
+2.14.0+cpu. CUDA is now verified on an RTX 3070 Ti using PyTorch 2.11.0+cu128;
+see [CUDA setup and measurements](docs/cuda.md). `device: auto` selects the GPU
+when the CUDA-enabled installation is active.
 
 ## Usage
 
@@ -243,7 +245,13 @@ full-pipeline benchmark additionally includes decoding, tracking, annotations
 and encoding. [Measured CPU comparison](reports/latest/inference_benchmark.json)
 and [full demo measurements](reports/latest/demo_benchmark.json) contain the
 actual values. A faster undertrained model is not an accuracy-preserving
-optimization. No CPU-versus-GPU improvement is claimed.
+optimization. Those original reports describe CPU-only measurements.
+
+A subsequent same-model, same-version benchmark measured **4.35 FPS on CPU versus
+53.15 FPS on the RTX 3070 Ti**, approximately **12.2× higher inference throughput**.
+See [the CUDA benchmark](reports/cuda/cpu_vs_cuda.json). The full GPU video pipeline
+processed all 750 frames at **20.31 FPS**; inference-only and complete-pipeline
+timings have different scopes.
 
 The measured reference-model inference rate was **3.05 FPS** in the 30-frame
 benchmark; the smaller undertrained model reached **48.15 FPS**. The complete

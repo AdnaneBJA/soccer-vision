@@ -30,8 +30,9 @@ python scripts/publish_results.py --training outputs/training/soccer_yolo26n_cpu
 ```
 
 For CPU/GPU comparison, use `--devices cpu cuda:0` in the benchmark command after
-installing a CUDA-enabled PyTorch build on a supported machine. No GPU is present
-in the development environment, so the published comparison is CPU-only. Run
+installing a CUDA-enabled PyTorch build on a supported machine. The original
+measurements used a CPU-only build; the RTX 3070 Ti has since been verified with
+CUDA. See `docs/cuda.md` and `reports/cuda/` for the new comparison. Run
 benchmarks without concurrent training/inference jobs; warm-up is excluded and
 decoding is outside the inference timer.
 
